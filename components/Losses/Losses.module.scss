@@ -1,0 +1,17 @@
+.lossesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > div {
+    margin: 1.75rem 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .lossesWrapper {
+    > div {
+      margin: 0.25rem 1rem;
+    }
+  }
+}

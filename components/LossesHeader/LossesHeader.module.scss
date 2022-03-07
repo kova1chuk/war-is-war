@@ -1,0 +1,32 @@
+.lossesHeader {
+  margin-bottom: 2.25rem;
+
+  h1 {
+    font-size: 3.125rem;
+    line-height: 3.75rem;
+    text-align: center;
+    color: #f4ca59;
+  }
+  p {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  .lossesHeader {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+
+    h1 {
+      font-size: 1.875rem;
+      line-height: 2.5rem;
+    }
+    p {
+      font-size: 1.5625rem;
+      line-height: 1.5625rem;
+    }
+  }
+}
