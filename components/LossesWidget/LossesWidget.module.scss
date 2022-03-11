@@ -4,10 +4,10 @@
   align-items: flex-start;
 
   &__img {
-    min-width: 5.625rem;
-    max-width: 5.625rem;
-    min-height: 5.625rem;
-    max-height: 5.625rem;
+    min-width: 9rem;
+    max-width: 9rem;
+    min-height: 9rem;
+    max-height: 9rem;
 
     > span {
       position: unset !important;
@@ -48,10 +48,10 @@
     align-items: center;
 
     &__img {
-      min-width: 3.75rem;
-      max-width: 3.75rem;
-      min-height: 3.75rem;
-      max-height: 3.75rem;
+      min-width: 6rem;
+      max-width: 6rem;
+      min-height: 6rem;
+      max-height: 6rem;
     }
 
     > section {

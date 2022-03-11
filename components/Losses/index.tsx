@@ -5,9 +5,11 @@ import styles from './Losses.module.scss';
 
 interface LossesProps {
   lossesData: Array<{
-    imgSrc: string;
-    desription: string;
+    id: string | number;
+    index: number;
+    title: string;
     value: number;
+    img: string;
   }>;
 }
 
@@ -15,18 +17,18 @@ const Losses: React.FC<LossesProps> = (props) => {
   const { lossesData } = props;
 
   return (
-    <div>
-      <LossesHeader date={new Date()} />
-      <div className={styles.lossesWrapper}>
-        {lossesData.map((item, index) => (
-          <LossesWidget
-            key={index}
-            imgSrc={item.imgSrc}
-            desription={item.desription}
-            value={item.value}
-          />
-        ))}
-      </div>
+    <div className={styles.lossesWrapper}>
+      {lossesData &&
+        lossesData
+          .sort((firstItem, secondItem) => firstItem.index - secondItem.index)
+          .map((item) => (
+            <LossesWidget
+              key={item.id}
+              title={item.title}
+              img={item.img}
+              value={item.value}
+            />
+          ))}
     </div>
   );
 };

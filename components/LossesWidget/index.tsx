@@ -3,27 +3,22 @@ import Image from 'next/image';
 import styles from './LossesWidget.module.scss';
 
 interface LossesWidgetProps {
-  imgSrc: string;
-  desription: string;
+  img: string;
+  title: string;
   value: number;
 }
 
 const LossesWidget: React.FC<LossesWidgetProps> = (props) => {
-  const { imgSrc, desription, value } = props;
+  const { img, title, value } = props;
 
   return (
     <div className={styles.lossesWidget}>
       <span className={styles.lossesWidget__img}>
-        <Image
-          className={styles.image}
-          src={imgSrc}
-          alt={desription}
-          layout="fill"
-        />
+        <Image className={styles.image} src={img} alt={title} layout="fill" />
       </span>
       <section>
         <var>{value}</var>
-        <p>{desription}</p>
+        <p>{title}</p>
       </section>
     </div>
   );
