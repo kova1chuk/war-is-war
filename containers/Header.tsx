@@ -2,8 +2,14 @@ import useHeaderSwr from 'api/strapi_admin/useHeaderSwr';
 
 import { default as LossesHeader } from 'components/LossesHeader';
 
-const Header: React.FC = () => {
-  const { header } = useHeaderSwr();
+interface HeaderProps {
+  locale: string;
+}
+
+const Header: React.FC<HeaderProps> = (props) => {
+  const { locale } = props;
+
+  const { header } = useHeaderSwr(locale);
 
   return header ? (
     <LossesHeader

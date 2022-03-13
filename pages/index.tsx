@@ -1,12 +1,18 @@
+import { useState } from 'react';
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
+// import { useTranslation } from 'react-i18next';
 
-import Losses from 'containers/Losses';
+import LocaleSwitch from 'components/LocaleSwitch';
 import Header from 'containers/Header';
+import Losses from 'containers/Losses';
 
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
+  const [locale, setLocale] = useState<string>('uk');
+
   return (
     <div className={styles.container}>
       <Head>
@@ -23,22 +29,14 @@ const Home: NextPage = () => {
           />
           <source src="/video/background/fog_background.mp4" type="video/mp4" />
         </video>
-        {/* <ul>
-          <li>uk</li>
-          <li>en</li>
-          <li>ru</li>
-        </ul> */}
+        <LocaleSwitch changeLanguage={(value: string) => setLocale(value)} />
         <div>
-          <Header />
-          <Losses />
+          <Header locale={locale} />
+          <Losses locale={locale} />
         </div>
       </main>
     </div>
   );
 };
-
-// export const getStaticProps: GetStaticProps = async (context) => {
-//   // ...
-// }
 
 export default Home;
