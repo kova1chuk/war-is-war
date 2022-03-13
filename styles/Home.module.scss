@@ -5,6 +5,21 @@
 .main {
   min-height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .lossesContent {
+    max-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // justify-content: center;
+  }
+
   > video {
     position: fixed;
     top: 50%;

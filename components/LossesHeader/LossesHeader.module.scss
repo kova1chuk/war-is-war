@@ -1,9 +1,12 @@
 .lossesHeader {
-  margin-bottom: 2.25rem;
+  max-width: 80%;
+
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 
   h1 {
-    font-size: 3.125rem;
-    line-height: 3.75rem;
+    font-size: 3rem;
+    line-height: 3.4rem;
     text-align: center;
     color: #f4ca59;
   }
@@ -17,7 +20,7 @@
 
 @media screen and (max-width: 37.5rem) {
   .lossesHeader {
-    padding: 0 1rem;
+    padding: 1.25rem 1rem;
     margin-bottom: 1rem;
 
     h1 {

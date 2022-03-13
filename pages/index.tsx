@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           <source src="/video/background/fog_background.mp4" type="video/mp4" />
         </video>
         <LocaleSwitch changeLanguage={(value: string) => setLocale(value)} />
-        <div>
+        <div className={styles.lossesContent}>
           <Header locale={locale} />
           <Losses locale={locale} />
         </div>

@@ -1,16 +1,45 @@
 .lossesWrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+
+  max-width: 81.25rem;
 
   > div {
-    margin: 1.75rem 1rem;
+    margin: 1.75rem 0;
+
+    width: 25%;
   }
 }
 
+@media screen and (max-width: 900px) {
+  .lossesWrapper {
+    > div {
+      margin: 1rem 0;
+
+      width: 30%;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .lossesWrapper {
+    > div {
+      width: 30%;
+    }
+  }
+}
 @media screen and (max-width: 600px) {
   .lossesWrapper {
     > div {
+      width: 25%;
+      margin: 0.25rem 1rem;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .lossesWrapper {
+    > div {
+      width: 30%;
       margin: 0.25rem 1rem;
     }
   }
