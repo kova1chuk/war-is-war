@@ -17,6 +17,7 @@ const parseLosses = (data: any): Array<Losses> =>
     title: lossItem.attributes.title,
     value: lossItem.attributes.value,
     img: lossItem.attributes.img.data.attributes.url,
+    lastDayLosses: lossItem.attributes.lastDayLosses,
   }));
 
 const useLossesSwr = (locale = 'uk') => {

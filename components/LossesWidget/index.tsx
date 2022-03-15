@@ -6,10 +6,12 @@ interface LossesWidgetProps {
   img: string;
   title: string;
   value: number;
+  lastDayLosses: number;
+  moreThan: boolean;
 }
 
 const LossesWidget: React.FC<LossesWidgetProps> = (props) => {
-  const { img, title, value } = props;
+  const { img, title, value, lastDayLosses, moreThan } = props;
 
   return (
     <div className={styles.lossesWidget}>
@@ -17,7 +19,13 @@ const LossesWidget: React.FC<LossesWidgetProps> = (props) => {
         <Image className={styles.image} src={img} alt={title} layout="fill" />
       </span>
       <section>
-        <var>{value}</var>
+        <div>
+          <p className={styles.lossesWidget__value}>
+            {moreThan && '> '}
+            {value}
+          </p>
+          {lastDayLosses && <span>+{lastDayLosses}</span>}
+        </div>
         <p>{title}</p>
       </section>
     </div>

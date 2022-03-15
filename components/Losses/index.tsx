@@ -10,6 +10,7 @@ interface LossesProps {
     title: string;
     value: number;
     img: string;
+    lastDayLosses: number;
   }>;
 }
 
@@ -21,12 +22,14 @@ const Losses: React.FC<LossesProps> = (props) => {
       {lossesData &&
         lossesData
           .sort((firstItem, secondItem) => firstItem.index - secondItem.index)
-          .map((item) => (
+          .map((item, index) => (
             <LossesWidget
               key={item.id}
               title={item.title}
               img={item.img}
               value={item.value}
+              lastDayLosses={item.lastDayLosses}
+              moreThan={index === 0}
             />
           ))}
     </div>
