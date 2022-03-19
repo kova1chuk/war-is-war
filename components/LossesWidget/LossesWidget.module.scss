@@ -83,3 +83,15 @@
     }
   }
 }
+
+@media screen and (max-width: 20.3125rem) {
+  .lossesWidget {
+    > section {
+      > div {
+        > p {
+          font-size: 7em;
+        }
+      }
+    }
+  }
+}
